@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row" *ngIf="$products |async as products">
+        <div class="col-3 mb-4" *ngFor="let product of products">
+            <div class="card card-product">
+                <img class="card-img-top" [src]="product.image | image">
+                <div class="card-body">
+                    <figcaption class="info-wrap">
+                        <p class="desc">{{ product.description }}</p>
+                        <h4 class="title"><span class="price-new">${{ product.price | number }}</span></h4>
+                        <span class="badge badge-pill badge-primary">{{ product.brand }}</span>
+                    </figcaption>
+                </div>
+                <div class="bottom-wrap d-flex justify-content-center">
+                    <a href="" class="btn btn-block btn-outline-primary">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

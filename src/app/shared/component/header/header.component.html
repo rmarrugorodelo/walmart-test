@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0, 113, 206);">
+    <div class="logo">
+        <a href="https://www.lider.cl/catalogo/">
+            <img alt="Lider Logo" src="../../../../assets/image/lider-logo.svg" style="width: 152px; height: 35px; margin-top: 12px; margin-bottom: 6px;">
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100">
+            <li class="nav-item">
+                <div class="menu-icon-container">
+                    <div style="cursor: pointer;"><i class="zmdi zmdi-menu menu-icon"></i>
+                        <div class="show-category">Categorías</div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item pill w-100 my-auto">
+                <div class="input-group my-auto" [formGroup]="searchformGroup">
+                    <div class="input-group-prepend">
+                        <button type="button" title="Submit your search query." class="btn btn-search">
+                                    <svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+                                        <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path>
+                                    </svg>
+                                </button>
+                    </div>
+                    <input type="text" formControlName="search" placeholder="¿Qué estás buscando?" class="form-control br-20">
+                </div>
+            </li>
+            <li class="nav-item categories">
+                <a target="_blank" rel="noopener noreferrer" class="styled__HoverLink-sc-17jbrkg-1 fMTbZy"><img height="20px" alt="supermercado" src="../../../../assets/image/lider-logo.svg"><span>Supermercado</span></a>
+            </li>
+        </ul>
+        <form class="form-inline ml-4 my-2 my-lg-0">
+            <div class="cart-supermarket-width">
+                <div class="cart-container" style="background-color: rgb(4, 30, 66);">
+                    <li class="list-inline-item cart-dropdown dropdown nav-item">
+                        <a aria-haspopup="true" class="p-0 nav-link" aria-expanded="false">
+                            <div id="shoppingCart" class="d-flex justify-content-between shopping-cart-images"><img alt="cart" src="../../../../assets/image/lider-cart.svg" width="29" height="25">
+                                <div class="cart-quantity">
+                                    <div id="quantityNumber" class="quantity-number">0</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div tabindex="-1" role="menu" aria-hidden="true" class="walmart-dropdown-cart dropdown-menu">
+                            <div class="dropdown-content">
+                                <div>
+                                    <div class="d-flex pull-right p-2 mr-5"><span class="cp-no-select"><i class="zmdi zmdi-close" style="font-size: 20px;"></i></span></div>
+                                    <div class="text-center p-4">
+                                        <h3 style="padding-top: 9px;">Tu carro está vacío</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
